@@ -1,1 +1,20 @@
-teste
+<table>
+  <tr>
+    <th>nome</th>
+    <th>idade</th>
+    <th>email</th>
+  </tr>
+  
+  <% @pessoas.each do |pessoa| %>
+
+    <tr>
+      <td> <%= pessoa.nome %> </td>
+      <td><%= pessoa.idade %> </td>
+      <td><%= pessoa.email %></td>
+      <td> <a href="<%= pessoa_show_path(pessoa.id)	%>"> show</a> </td>
+    </tr>
+
+  <% end %>
+
+
+</table>

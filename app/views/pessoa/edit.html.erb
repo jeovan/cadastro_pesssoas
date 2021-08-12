@@ -1,0 +1,13 @@
+<p>Pessoa:</p>
+
+<form method="put" action="<%= pessoa_update_path(@pessoa.id)%>">
+
+  <label for="nome">NOME:</label><br>
+  <input type="text" id="nome" name="nome" value="<%= @pessoa.nome%>" ><br>
+  <label for="idade">IDADE:</label><br>
+  <input type="number" id="idade" name="idade" value="<%= @pessoa.idade%>"><br>
+  <label for="email">EMAIL:</label><br>
+  <input type="text" id="email" name="email" value="<%= @pessoa.email%>" ><br>
+  <br>
+  <input type="submit" value="atualizar"/>
+</form>

@@ -1,0 +1,15 @@
+<p>Pessoa:</p>
+
+<form>
+
+  <label for="nome">NOME:</label><br>
+  <input type="text" id="nome" name="nome" value="<%= @pessoa.nome%>" disabled><br>
+  <label for="idade">IDADE:</label><br>
+  <input type="number" id="idade" name="idade" value="<%= @pessoa.idade%>"disabled><br>
+  <label for="email">EMAIL:</label><br>
+  <input type="text" id="email" name="email" value="<%= @pessoa.email%>" disabled><br>
+  <br>
+  <input type="submit" value="enviar"/>
+  <a href="<%= pessoa_edit_path(@pessoa.id)%>"> EDITAR</a>
+
+</form>
