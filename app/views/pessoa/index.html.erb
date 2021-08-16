@@ -12,6 +12,7 @@
       <td><%= pessoa.idade %> </td>
       <td><%= pessoa.email %></td>
       <td> <a href="<%= pessoa_show_path(pessoa.id)	%>"> show</a> </td>
+      <td> <a data-confirm="confirmar ação?" data-method="delete" href="<%= pessoa_delete_path(pessoa.id)	%>"> delete</a> </td>
     </tr>
 
   <% end %>

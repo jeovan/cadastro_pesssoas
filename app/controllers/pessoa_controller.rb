@@ -15,6 +15,18 @@ class PessoaController < ApplicationController
     @pessoa = Pessoa.find(params[:id])
   end
 
+  def update
+    pessoa = Pessoa.find(params[:id])
+    pessoa.update!({
+      :nome => params['nome'],
+      :idade => params['idade'],
+      :email => params['email']
+    })
+
+    redirect_to :action => "index"
+    
+  end
+
   def create 
     puts params.inspect
 
@@ -25,6 +37,12 @@ class PessoaController < ApplicationController
 
     pessoa.save!
 
+    redirect_to :action => "index"
+  end
+
+
+  def destroy
+    Pessoa.find(params[:id]).destroy
     redirect_to :action => "index"
   end
 

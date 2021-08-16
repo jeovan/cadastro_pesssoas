@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @v2_pessoa.nome %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @v2_pessoa.idade %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @v2_pessoa.email %>
+</p>
+
+<%= link_to 'Edit', edit_v2_pessoa_path(@v2_pessoa) %> |
+<%= link_to 'Back', v2_pessoas_path %>

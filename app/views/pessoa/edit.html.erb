@@ -1,6 +1,6 @@
 <p>Pessoa:</p>
 
-<form method="put" action="<%= pessoa_update_path(@pessoa.id)%>">
+<form method="post" action="<%= pessoa_update_path(@pessoa.id)%>" >
 
   <label for="nome">NOME:</label><br>
   <input type="text" id="nome" name="nome" value="<%= @pessoa.nome%>" ><br>

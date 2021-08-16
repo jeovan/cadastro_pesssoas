@@ -1,0 +1,32 @@
+<%= form_with(model: v2_pessoa) do |form| %>
+  <% if v2_pessoa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(v2_pessoa.errors.count, "error") %> prohibited this v2_pessoa from being saved:</h2>
+
+      <ul>
+        <% v2_pessoa.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idade %>
+    <%= form.text_field :idade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
